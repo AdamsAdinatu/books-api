@@ -1,14 +1,15 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const router=require("./routes/booksRoute")
+const logger = require("express")
+const books =require("./books")
 
-cdotenv.config();
+dotenv.config();
 const app =express();
 //middleware
-app.use(logger);
 
 app.use(express.json());
-
+app.use(logger);
 //route
 app.get("/",(req,res) =>{
     res.send("Welcome to our library stockpile")

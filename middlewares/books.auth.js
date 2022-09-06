@@ -1,0 +1,12 @@
+function auth(req, res, next) {
+    let isVerified = true;
+    if (isVerified) {
+        console.log("added successful")
+
+        next()
+    } else {
+        console.log("not authorised")
+        throw error;
+    }
+}
+module.exports=auth

@@ -1,8 +1,8 @@
-import books from ("../books")
+const books=require ("../books")
 
 
 //get allbooks
-const getbooks =(req, res) => {
+const getBooks =(req, res) => {
     res.status(200).json(books);
 }
-module.exports={getBOOKS}
+module.exports={getBooks}
